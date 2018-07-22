@@ -14,7 +14,7 @@ $(function () {
     $('#button').on('click', function () {
         
         var text = $('#text').val();
-        var link = 'https://galvanize-cors.herokuapp.com/https://api.meetup.com/2/open_events?&key=673e4c22272f4632b4c671069d3752&photo-host=public&zip=&page=50';
+        var link = 'https://galvanize-cors.herokuapp.com/https://api.meetup.com/2/open_events?&key=673e4c22272f4632b4c671069d3752&photo-host=public&zip=&page=200';
         link = link.insert(132, text);
 
         $(document).ready(function(){
