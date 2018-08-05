@@ -11,9 +11,10 @@ String.prototype.insert = function (index, string) {
   };
 
 $(function () {
-    $('#button').on('click', function () {
-        
-        var text = $('#text').val();
+    
+    $('.btn').on('click', function () {  
+
+        var text = $('.zip').val();
         var link = 'https://galvanize-cors.herokuapp.com/https://api.meetup.com/2/open_events?&key=673e4c22272f4632b4c671069d3752&photo-host=public&zip=&page=200';
         link = link.insert(132, text);
 
@@ -36,14 +37,13 @@ $(function () {
                   
                 events.sort(function(a, b){return b.rsvps - a.rsvps}); 
 
-                for (var i = 0; i < events.length; i++) {
-                    var link = '<br />' + '<a href="'+ events[i].link + '">' + events[i].name + ': ' + events[i].rsvps + ' rsvp\'d' + '</a>';
-                    $('body').append(link);
-                }
-            })
-        }) 
 
-        
+                for (var i = 0; i < events.length; i++) {
+                    var link = '<li  class="list-group-item">' + '<a href="'+ events[i].link + '">'+ events[i].rsvps + ' rsvp\'d from: ' + events[i].name + '</a>' + "</li>";
+                    $('.list-group').append(link);
+                };
+            });
+        });        
 
     });
 });

@@ -5,15 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Most Popular Meetups</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css" />
     
 </head>
 <body>
-    <h1>Most Popular Meetup Events Near You</h1>
-    <p>Enter zip</p>
-    <input type="text" id="text" style="width: 150px;" />
-    <input type="button" value="Click Me" id="button" />​
+
+  <div class="container-fluid bg-primary">
+    <div class="row form-group"></div>
+    <div class="row form-group">
+      <div class="col-md-6 offset-md-3">
+        <h1 class="text-light">Most Popular Meetup Events Near You</h1>
+      </div>      
+    </div>
+    <div class="row form-group">
+      <div class="col-md-1 offset-md-3">
+        <h2 class="text-light">Enter zip:</h2>
+      </div>
+      <div class="col-md-1">
+        <input type="text" class="zip form-control" style="width: 150px;" />
+      </div>
+      <div class="col-md-1">
+        <input type="button" value="Find Meetups!" class="btn btn-light" />​      
+      </div>       
+    </div>    
+    <div class="row form-group"></div>     
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-5 offset-md-3">
+        <ul class="list-group">
+        </ul>
+      </div>      
+    </div>
+  </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
