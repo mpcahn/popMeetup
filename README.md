@@ -2,4 +2,4 @@
 
 Returns a list of the most popular meetups around a zip code.
 
-link: [PopMeetup](popmeetup.surge.sh)
+link: [PopMeetup](http://popmeetup.surge.sh)
