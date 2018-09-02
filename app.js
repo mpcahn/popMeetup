@@ -14,24 +14,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
     };
 
     $('.btn').on('click', function () {
-
-        var zip = $('.zip').val();
-        var day = $('.date').val();
+        var zip = $('.zip').val()
+        var day = $('.date').val()
         console.log(day)
-        var link = 'https://galvanize-cors.herokuapp.com/https://api.meetup.com/2/open_events?&key=673e4c22272f4632b4c671069d3752&photo-host=public&zip=&page=200';
-        link = link.insert(132, zip);
+        var link = 'https://galvanize-cors.herokuapp.com/https://api.meetup.com/2/open_events?&key=673e4c22272f4632b4c671069d3752&photo-host=public&zip=&page=200'
+        link = link.insert(132, zip)
 
-
-
-        $(document).ready(function () {
+        
             $.get(link)
                 .then(function (data) {
                     dataLength = data.results.length
                     for (var i = 0; i < dataLength; i++) {
                         data.results[i].group.name
-                        group_name = data.results[i].group.name;
-                        num_rsvps = data.results[i].yes_rsvp_count;
-                        url = data.results[i].event_url;
+                        group_name = data.results[i].group.name
+                        num_rsvps = data.results[i].yes_rsvp_count
+                        url = data.results[i].event_url
                         console.log(data.results)
                         
                         obj = {
@@ -39,20 +36,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
                             'link': url,
                             'rsvps': num_rsvps
                         }
-                        events.push(obj);
+                        events.push(obj)
                     }
 
                     events.sort(function (a, b) {
                         return b.rsvps - a.rsvps
-                    });
+                    })
 
 
                     for (var i = 0; i < events.length; i++) {
-                        var link = '<li  class="list-group-item">' + '<a href="' + events[i].link + '">' + events[i].rsvps + ' rsvp\'d from: ' + events[i].name + '</a>' + "</li>";
-                        $('.list-group').append(link);
-                    };
+                        var link = '<li  class="list-group-item">' + '<a href="' + events[i].link + '">' + events[i].rsvps + ' rsvp\'d from: ' + events[i].name + '</a>' + "</li>"
+                        $('.list-group').append(link)
+                    }
                 });
-        });
-
-    });
-});
+        })
+    })
