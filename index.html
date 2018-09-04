@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Most Popular Meetups</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css" />
-    
-</head>
-<body>
 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Most Popular Meetups</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body>
   <div class="container-fluid bg-primary">
-    <div class="row form-group"></div>
-    <div class="row form-group">
-      <div class="col-md-6 offset-md-3">
-        <h1 class="text-light">Most Popular Meetup Events Near You</h1>
-      </div>      
+    <div class="col-lg-6 offset-lg-3 col-sm-12 top-buffer">
+      <h1 class="text-light">Most Popular Meetup Events Near You</h1>
     </div>
-    <div class="row bottom-buffer form-group">
-      <div class="col-md-2 offset-md-3">
-        <h3 class="text-light">Enter zip:</h2>
+    <div class="row form-group top-buffer">
+      <div class="row bottom-buffer form-group">
+        <label for="zip" class="col-1 offset-lg-2 col-form-label text-light">Zip:</label>
+        <div class="col-lg-2 col-sm-12">
+          <input type="text" class="zip form-control"/>
+        </div>
+        <div class="col-lg-2 col-sm-12">
+          <input type="button" value="Find Meetups!" class="btn btn-light" />
+        </div>        ​
       </div>
-      <div class="col-md-2">
-        <input type="text" class="zip form-control" style="width: 200px;" />
-      </div class="col-md-2">  
-        <input type="button" value="Find Meetups!" class="btn btn-light" />​      
-      </div>      
-    </div>   
+    </div>
     <div class="row top-buffer bottom-buffer"></div>
   </div>
 
@@ -36,12 +35,13 @@
       <div class="col-md-5 offset-md-3">
         <ul class="list-group">
         </ul>
-      </div>      
+      </div>
     </div>
   </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
