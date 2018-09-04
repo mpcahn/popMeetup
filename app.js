@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     group_name = data.results[i].group.name
                     num_rsvps = data.results[i].yes_rsvp_count
                     url = data.results[i].event_url
+                    time = data.results[i].time + data.results[i].utc_offset 
+                    console.log(group_name, ': ', time)
 
                     obj = {
                         'name': group_name,
