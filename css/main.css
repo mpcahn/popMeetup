@@ -10,3 +10,9 @@
 .top-buffer {
   padding-top: 15px;
 }
+
+@media (max-width: 992px) {
+  .zip {
+    margin-bottom: 15px;
+  }
+}
